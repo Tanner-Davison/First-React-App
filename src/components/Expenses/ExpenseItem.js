@@ -21,16 +21,18 @@ const ExpenseItem = (props) => {
 		console.log(counter);
 	};
 	return (
-		<Card className='expense-item'>
-			<ExpenseDate date={props.date} />
-			<div className='expense-item__description'>
-				<h2>{title}</h2>
-				<div className='expense-item__price'>
-					<h2>{props.amount}</h2>
+		<li>
+			<Card className='expense-item'>
+				<ExpenseDate date={props.date} />
+				<div className='expense-item__description'>
+					<h2>{title}</h2>
+					<div className='expense-item__price'>
+						<h2>{props.amount}</h2>
+					</div>
+					<button onClick={clickHandler}>save title</button>
 				</div>
-				<button onClick={clickHandler}>save title</button>
-			</div>
-		</Card>
+			</Card>
+		</li>
 	);
 };
 
